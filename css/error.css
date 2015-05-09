@@ -1,0 +1,19 @@
+#content {
+    width: 600px;
+    margin: 0px auto;
+    padding: 224px 0px 0px 0px;
+    font-family: monospace, sans-serif;
+}
+
+#large {
+    width: 100%;
+    font-size: 224px;
+    color: #47a3da;
+    text-align: center;
+}
+
+#small {
+    width: 100%;
+    font-size: 16px;
+    color: #222222;
+}

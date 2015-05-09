@@ -1,0 +1,212 @@
+@font-face {
+    font-family: Civita;
+    src: url("fonts/CivitaLig-webfont.eot");
+    src: url("fonts/CivitaLig-webfont.eot?#iefix") format("embedded-opentype"),
+         url("fonts/CivitaLig-webfont.woff2") format("woff2"),
+         url("fonts/CivitaLig-webfont.woff") format("woff"),
+         url("fonts/CivitaLig-webfont.ttf") format("truetype"),
+         url("fonts/CivitaLig-webfont.svg#civitalight") format("svg");
+    font-weight: bold;
+    font-style: normal;
+}
+
+body, h1, h2, h3, h4, div, input, img, .button, .actionButton, #modalContent {
+    font-family: Civita, Arial, san-serif !important;
+}
+
+#header {
+    overflow: hidden;
+    height: 85px !important;
+    margin-top: 48px;
+    padding: 16px;
+    border: 1px solid #47a3da;
+}
+
+#logo {
+    float: left;
+    height: 53px;
+    cursor: pointer;
+    background-color: #47a3da;
+    /* Transition easing taken from http://matthewlein.com/ceaser/ */
+    transition: background-color 300ms cubic-bezier(0.250, 0.460, 0.450, 0.940);
+}
+
+#logo:hover {
+    background-color: #002147;
+}
+
+h2 {
+    float: left;
+    margin: 0px 0px 0px 12px;
+    color: #222222;
+}
+
+#sketchCanvas {
+    box-sizing: border-box;
+    margin-top: 8px;
+    border: 1px solid #47a3da;
+    cursor: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIcSURBVFhHvZY9T8JAGMfveoXRxcVBSUDlMxgWw4TVQUfjYPwyfgzdWJwR4mBMHIgJJBqdxIYBSTQuJsTBQGn937Ulhda+l1/S9rmW8Pz63EuP0tLerWEYv5TSLiWkI8tyd9xrfJIlQUmxVsf1xGzOGOLoQqpDKenKjD2Me9cj81G6SEjyaMVO1nEcoTLnum7cjCfai7y9XzIfpQsEyLMV+1HQtOldFhIS+vzJioPIRALjDhRrHziviTiYgSyzqvbW7FvtREjWNWwVOKISufJBKpUQAiHHgZPCZKKlImFVwHMmBJGKhBBgktTGJc48TywhBDS1OWBMUhDGlsjHlDBngQXbUirTqd5CuGLeicQgn5OrWDEjzY45Ac6yJVwCnGVK2OvAHFO11cZiE3tM4NsRemB6VsAGy24Fi07sSuRQiUlAJXwFOFlLBApwspTwHAOL4MOTZEz45ghVAZsYlRji7Xf9uiBUBWwiVsKVHNP7eHE/EUmAE1LCnXxTOcPaUuefcqdEpC5w4tMdruQSkuu6fsFD8w42NQybGrXZjy3A8ZAIk9xGSCQS4DgkRhGSC7Ajv0oswIHEDv7sK0py0M7nc0oqAouIAReQHNVSIDxi1o3UQPJTJL9E6PvmPDlv/Pej+FCi4vxjNlyI5OPXxmwKZ9MF3vsJV3JOJgIcdEUFXWFLzPpcPHSQ+hiwMb7Vd7Zavke4gTc/9EpOCCF/rnoly/pe1dsAAAAASUVORK5CYII=") 0 0, pointer;
+}
+
+#sketchName {
+    box-sizing: border-box;
+    display: inline-block;
+    float: right;
+    height: 51px;
+    width: 362px;
+    margin-right: 8px;
+    padding: 6px 6px 6px 12px;
+    font-size: 18px;
+}
+
+input:focus {
+    border: 1px solid #47a3da !important;
+}
+
+.actionButton {
+    float: right;
+    height: 51px;
+    width: 111px;
+    margin-bottom: 0px;
+    padding: 16px 0px !important;
+    font-size: 22px !important;
+    text-align: center;
+    line-height: 17px;
+    color: #ffffff !important;
+}
+
+.actionButton:hover {
+    background: #002147;
+}
+
+#saved,
+#sketchNew,
+#sketchSubmit {
+    margin-right: 8px !important;
+}
+
+a {
+    outline: none !important;
+    border: none !important;
+    text-decoration:  none !important;
+}
+
+#xhrMessage {
+    z-index: 500;
+    height: 51px;
+    width: 362px;
+    padding: 0px 12px;
+    font-size: 18px;
+    line-height: 51px;
+    text-align: center;
+    color: #ffffff;
+    background: #47a3da;
+}
+
+.reveal-modal {
+    box-sizing: border-box;
+    z-index: 5000;
+    top: 141px;
+    height: 667px;
+    width: 970px;
+    box-shadow: none;
+    border-color: #47a3da;
+}
+
+a.close-reveal-modal {
+    color: #47a3da !important;
+    /* Transition easing taken from http://matthewlein.com/ceaser/ */
+    transition: color 300ms cubic-bezier(0.250, 0.460, 0.450, 0.940);
+}
+
+a.close-reveal-modal:hover {
+    color: #002147 !important;
+}
+
+a.modalHREF {
+    padding: 6px 16px;
+    color: #ffffff !important;
+    background: #47a3da !important;
+    /* Transition easing taken from http://matthewlein.com/ceaser/ */
+    transition: background-color 300ms cubic-bezier(0.250, 0.460, 0.450, 0.940);
+}
+
+a.modalHREF:hover {
+    background-color: #002147 !important;
+}
+
+a.modalHREF:visited {
+    background-color: #002147 !important;
+}
+
+#modalTitle {
+    margin: 0px 0px 24px 0px;
+    text-align: center;
+}
+
+#modalDescription {
+    margin: 0px 0px 40px 0px;
+}
+
+ul.resourceLinks {
+    margin: 0px;
+}
+
+ul.resourceLinks li {
+    list-style: none;
+    height: 33px;
+    margin: 0px 0px 16px 56px;
+}
+
+.reveal-modal-bg {
+    background: #47a3da;
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+/* Print rules based on: 
+        http://foundation.zurb.com/forum/posts/2820-printing-foundation-5
+        http://stackoverflow.com/questions/14987496/background-color-not-showing-in-print-preview
+*/
+@media print {
+    
+    body {
+        margin: 0px !important;
+        padding: 0px !important;
+    }
+    
+    #header {
+        width: 970px !important;
+    }
+    
+    #header h2 {
+        font-size: 37px !important;
+    }
+    
+    a {
+        color: #ffffff !important;
+    }
+    
+    a[href]:after {
+        content: "" !important;
+    }
+    
+    .large-12 {
+        width: 100%;
+    }
+    
+    #sketchToggle{
+        margin-right: -15px !important;
+    }
+    
+    #xhrMessage {
+        width: 362px !important;
+        color: #ffffff !important;
+        background: #47a3da !important;
+    }
+    
+    .reveal-modal {
+        margin-left: 15px !important;
+    }
+    
+}

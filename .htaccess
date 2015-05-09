@@ -1,0 +1,30 @@
+ErrorDocument 404 http://bullen.io/cscie12/404.html
+ErrorDocument 500 http://bullen.io/cscie12/500.html
+
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresDefault "access plus 1 day"
+    ExpiresByType text/html M604800
+    ExpiresByType text/css M604800
+    ExpiresByType application/x-javascript M604800
+    ExpiresByType application/javascript M604800
+</IfModule>
+
+# Sources:
+#     http://stackoverflow.com/questions/49547/making-sure-a-web-page-is-not-cached-across-all-browsers
+#     http://stackoverflow.com/questions/13333855/caching-image-but-update-on-change
+<FilesMatch "(?i)^.*\.(png)$">
+    FileETag None    
+    <IfModule mod_headers.c>
+        Header unset ETag
+        Header set Cache-Control "max-age=0, no-cache, no-store, must-revalidate"
+        Header set Pragma "no-cache"
+        Header set Expires "Wed, 11 Jan 1984 05:00:00 GMT"
+    </IfModule>
+</FilesMatch>
+
+AddOutputFilterByType DEFLATE text/html
+AddOutputFilterByType DEFLATE text/css
+AddOutputFilterByType DEFLATE application/x-javascript
+AddOutputFilterByType DEFLATE application/javascript
+AddOutputFilterByType DEFLATE image/png

@@ -1,0 +1,172 @@
+@font-face {
+    font-family: Civita;
+    src: url("fonts/CivitaLig-webfont.eot");
+    src: url("fonts/CivitaLig-webfont.eot?#iefix") format("embedded-opentype"),
+         url("fonts/CivitaLig-webfont.woff2") format("woff2"),
+         url("fonts/CivitaLig-webfont.woff") format("woff"),
+         url("fonts/CivitaLig-webfont.ttf") format("truetype"),
+         url("fonts/CivitaLig-webfont.svg#civitalight") format("svg");
+    font-weight: bold;
+    font-style: normal;
+}
+
+body, h1, h2, h3, h4, div, img, #header, .button, .actionButton, #title {
+    font-family: Civita, Arial, san-serif !important;
+}
+
+#header {
+    overflow: hidden;
+    margin-top: 48px;
+    padding: 16px;
+    background: #47a3da;
+}
+
+#header h2 {
+    float: left;
+    margin: 0px 0px 0px 18px;
+    font-size: 64px;
+    color: #ffffff;
+}
+
+#enter {
+    float: right;
+    box-sizing: border-box;
+    height: 75px;
+    margin-top: 7px;
+    padding: 4px;
+    background: #ffffff;
+}
+
+#logo {
+    float: left;
+    height: 89px;
+    
+}
+
+.actionButton {
+    margin: 0px;
+    padding: 16px 24px;
+    font-size: 22px;
+    text-align: center;
+    line-height: 35px;
+    color: #ffffff;
+}
+
+.centerButton {
+    margin-top: 50px;
+    padding: 25px 35px;
+    font-size: 26px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.actionButton:hover,
+.centerButton:hover {
+    background: #002147;
+}
+
+#title {
+    padding: 80px 0px 100px 0px;
+    text-align: center;
+}
+
+.large-3 {
+    padding: 0px 30px;
+}
+
+.large-3 img {
+    box-sizing: border-box;
+    width: 80px;
+    margin: 0px 0px 30px 55px;
+}
+
+.panel {
+    padding: 8px 16px;
+    border: none;
+    background: #47a3da;
+}
+
+.panel h4 {
+    text-decoration: underline;
+    color: #ffffff !important;
+    cursor: default;
+}
+
+.panel p {
+    font-size: 14px;
+    color: #ffffff !important;
+    cursor: default;
+}
+
+#footer {
+    height: 8px;
+    margin-top: 30px;
+    background: #47a3da;
+}
+
+/* Print rules based on: 
+        http://foundation.zurb.com/forum/posts/2820-printing-foundation-5
+        http://stackoverflow.com/questions/14987496/background-color-not-showing-in-print-preview
+*/
+@media print {
+    
+    body {
+        margin: 0px !important;
+        padding: 0px !important;
+    }
+    
+    #header {
+        background: #47a3da !important;
+    }
+    
+    #header h2 {
+        color: #ffffff !important;
+    }
+
+    #enter {
+        margin-top: 3px !important;
+    }
+    
+    .actionButton {
+        border: 4px solid #ffffff;
+    }
+    
+    a {
+        color: #ffffff !important;
+    }
+    
+    a[href]:after {
+        content: "" !important;
+    }
+    
+    #title {
+        padding-bottom: 80px;
+    }
+    
+    .large-3 {
+        width: 25%;
+        margin: 0px;
+        padding: 0px;
+    }
+    
+    .large-3 img {
+        width: 40%;
+        margin: 0px 0px 12px 30%;
+    }
+
+    .panel p {
+        width: 100%;
+        padding: 6px 9px !important;
+        color: #ffffff !important;
+        background: #47a3da !important;
+    }
+    
+    .large-12 {
+        width: 100%;
+    }
+    
+    #footer{
+        margin-top: 15px;
+        background: #47a3da !important;
+    }
+}

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		
+		<!-- Meta -->
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3">
+        <meta name="robots" content="index, follow">
+		<meta name="description" content="CSCI E-12 Final Project - Main User Interaction Page">
+		<meta name="author" content="Matthew Bullen">
+		
+		<!-- Title & Favicon -->
+		<title>Sketchpad Ready!</title>
+		<link id="favicon" rel="shortcut icon" href="image/favicon.ico" />
+		
+		<!-- CSS -->
+		<link rel="stylesheet" href="css/normalize.css" />
+		<link rel="stylesheet" href="css/foundation.min.css" />
+		<link rel="stylesheet" href="css/main.css" />
+    
+		<!-- JS -->
+		<script src="https://code.jquery.com/jquery-2.1.3.min.js" > </script>
+		<script src="js/sketch.js" > </script>
+		<script src="js/foundation.min.js"> </script>
+		<script src="js/main.js" > </script>
+		
+        <!-- Google Analytics -->
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+            ga('create','UA-62692708-1','auto');
+            ga('send','pageview');
+        </script>
+
+	</head>
+	
+	<body>
+		
+		<div class="row">
+		
+			<div class="large-12 columns">
+				
+				<div id="header">
+				
+					<div class="nav-bar right">
+					
+						<ul class="button-group">
+						
+							<li><button id="sketchNew" class="actionButton" type="button">New</button></li>
+							
+							<li><a href="gallery.html" id="saved" class="button actionButton">Saved</a></li>
+							
+							<li><a href="#" id="about" class="button actionButton">About</a></li>
+							
+						</ul>
+					
+					</div>
+					
+					<a href="index.html" title="Return to the landing page?"><img id="logo" src="image/logo.png" alt="Return to the landing page?" /></a>
+					
+					<h2>Sketchpad Ready!</h2>
+				
+				</div>
+
+			</div>
+			
+		</div>
+
+		<div class="row">
+			
+			<div id="content" class="large-12 columns">
+			
+				<canvas id="sketchCanvas" style="background: url(http://bullen.io/cscie12/php/background/background.png) repeat"></canvas>
+				
+				<button id="sketchToggle" class="actionButton" type="button" data-color="color">Erase</button>
+				
+				<form id="sketchForm" method="post" action="php/upload.php" enctype="multipart/form-data">
+					
+					<button id="sketchSubmit" class="actionButton" name="sketchSubmit" type="submit">Save</button>
+					
+					<input id="sketchName" name="sketchName" type="text" size="10" placeholder="Name your sketch!" title="Name your sketch!" />
+					
+					<input id="hiddenData" name="hiddenData" type="hidden" />
+					
+				</form>
+				
+				<div id="xhrMessage"></div>
+				
+			</div>
+			
+		</div>
+		
+		<div id="modal" class="reveal-modal" data-reveal role="dialog"></div>
+		
+	</body>
+
+</html>

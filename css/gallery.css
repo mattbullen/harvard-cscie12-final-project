@@ -1,0 +1,197 @@
+#new {
+    margin-right: 8px;
+}
+
+#content {
+    box-sizing: border-box;
+    width: 970px;
+    min-height: 667px;
+    padding: 16px 8px;
+    margin: 8px 0px 0px 15px;
+    border: 1px solid #47a3da;
+}
+
+#galleryMessage {
+    position: relative;
+    z-index: 500;
+    height: 51px;
+    max-width: 350px !important;
+    margin: 272px auto 0px auto;
+    padding: 0px 12px;
+    font-size: 18px;
+    line-height: 51px;
+    text-align: center;
+    color: #ffffff;
+    background: #47a3da;
+    cursor: pointer;
+    /* Transition easing taken from http://matthewlein.com/ceaser/ */
+    transition: background-color 300ms cubic-bezier(0.250, 0.460, 0.450, 0.940);
+}
+
+#galleryMessage:hover {
+    background-color: #002147;
+}
+
+a {
+    outline: none !important;
+    border: none !important;
+    text-decoration:  none !important;
+    color: #ffffff !important;
+}
+
+#colorbox {
+    top: 130px !important;
+    height: 677px !important;
+}
+
+#cboxLoadingOverlay,
+#cboxLoadingGraphic {
+    opacity: 0;
+}
+
+#cboxOverlay {
+    background-color: #47a3da;
+}
+
+#cboxTitle {
+    display: none !important;
+}
+
+#cboxContent,
+#cboxLoadedContent {
+    background: #ffffff;
+}
+
+#cboxLoadedContent {
+    z-index: 5000 !important;
+}
+
+.slide {
+    box-sizing: border-box;
+    float: left;
+    width: 238px;
+    margin: 0px 0px 24px 0px;
+    padding: 0px 8px;
+}
+
+.slideshow {
+    background: #ffffff;
+}
+
+.thumbnail {
+    box-sizing: border-box;
+    height: 148px;
+    width: 222px;
+    margin: 0px 0px 6px 0px;
+    padding: 6px;
+    border: 1px solid #47a3da;
+    /* Transition easing taken from http://matthewlein.com/ceaser/ */
+    transition: border-color 300ms cubic-bezier(0.250, 0.460, 0.450, 0.940);
+}
+
+.thumbnail:hover {
+    border-color: #002147;
+}
+
+.slideBar {
+    width: 100%;
+    height: 21px;
+    display: block;
+    font-size: 16px;
+    text-align: center;
+}
+
+.title {
+    position: relative;
+    height: 21px;
+    top: -6px;
+    line-height: 21px;
+}
+
+.mini {
+    display: inline-block;
+    height: 21px;
+    width: 21px;
+    margin: 0px 0px 0px 4px;
+    border-radius: 50%;
+    color: transparent;
+    /* Transition easing taken from http://matthewlein.com/ceaser/ */
+    transition: background-color 300ms cubic-bezier(0.250, 0.460, 0.450, 0.940);
+    cursor: pointer;
+}
+
+.edit {
+    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAB5klEQVRIx7VWvUoDQRA+LCVY5AEkBEltaSki+RcbG4NPIcHiHid3SQwBwfoqHyBY71hYiKSyCIdVkDizmTF7e7m9C5KFKW535puZb2Znz/McqxVCtRGAjxKhzFGWLHPe80nH23WhUQWNJyg/KKscIZ0J2RQCb4ZwhwZxfaAEIEaZNgPoo/RY+rTHZyvWjcnWDR7Ag2GwIKDuCEpZ+nTGzhYSEGG4IpeoZ60hHBemFHXJRuxTmTDnQsusPYSjPNCr8VsJ7c7km2zItj5Y05qoCRVJaCkSeQepQd2XRqC+W6G6tDIRuiYSfVW6hfjMj1zAhc6kE66J7i7dwtznOi1XQW1winLTadrJhRReuouwyUHEitMi4AJsCu5/Yg1qBuVT3o88vpVOetK0JCQBbtE09/jqk4PeLrRI5B0LnB302MFSOyDlLAfdMZRR53ULLR8IfrLNhrBYZ+mkCLvgBtOviBODlkzwbRRF/JEqMu49o7xbTpzgUmTG1EX2ZViZbXr7pA5w74vP1k5GUM4DlzZlOz/zorVDOJVC6dkUwr1XYKUuGqeUGhXtoaqhwvn1ozosAqxr9jcqYDMquJg7Dzt7bYadSg87ndo+x7XB3/4eHCuT2LhQzifT1Mt9Mq2a7OfRtxz9+7flF9Mx/hIOA9u1AAAAAElFTkSuQmCC") no-repeat;
+    background-size: contain;
+}
+
+.delete {
+    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAABpElEQVRIx7VWwUrEMBDtB4hH8Sjid3jUrVbxJCIePfgFIvkR8epuV/oNPYnsJyyL+YF+QE5Sis6EWUkmmaS7YmBoNzvzJvMyL2lRJEY504enU63AWrAOrCfraE6hT7HpgKADCG7ABrDvjKFPgzGjwCczfQcB5uT10wLgc8w7xmBsGnyqH93gTQ1jESO18hwdoyyohDg3rOQBVvMCz68ELejz7PvYJMbbE9wkVuoAq3igyqo1QMTnnnyuuA9iuq04sBKfWIU2ids5JYE7Pre8u2wLU5975YMtz2u9JyQJwC/megfm39cUOTgKE7RCR0STSOACRluQKqWOWFZzP4k7Lt8s+EcivitI+qKIpCQIPiFwP/a3k9B6myAjHuT8OjhOan0c6y4W2+coCjY0011RilpJRBwcaeF0lY5OIhTZTVYCLQE4cR7sSUKMShKad2BVTp8ndHITFRo/KujP1Vmt9zm4JEbw3YXfC0ZREz3sHJAVABxJInLEiD4LNm+CC0g4rvsRx3PgI148/MLZ5l28cFglJiUgga78lcn25H8ufZboz58tPzrtTbMt1DyfAAAAAElFTkSuQmCC") no-repeat;
+    background-size: contain;
+}
+
+.edit:hover,
+.delete:hover,
+.edit:active,
+.delete:active {
+    background-color: #002147;
+}
+
+/* Print rules based on: 
+        http://foundation.zurb.com/forum/posts/2820-printing-foundation-5
+        http://stackoverflow.com/questions/14987496/background-color-not-showing-in-print-preview
+*/
+@media print {
+    
+    body {
+        margin: 0px !important;
+        padding: 0px !important;
+    }
+    
+    #header {
+        width: 970px !important;
+    }
+    
+    #header h2 {
+        font-size: 37px !important;
+    }
+    
+    a,
+    #galleryMessage {
+        color: #ffffff !important;
+    }
+    
+    a[href]:after {
+        content: "" !important;
+    }
+    
+    .edit {
+        background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAB5klEQVRIx7VWvUoDQRA+LCVY5AEkBEltaSki+RcbG4NPIcHiHid3SQwBwfoqHyBY71hYiKSyCIdVkDizmTF7e7m9C5KFKW535puZb2Znz/McqxVCtRGAjxKhzFGWLHPe80nH23WhUQWNJyg/KKscIZ0J2RQCb4ZwhwZxfaAEIEaZNgPoo/RY+rTHZyvWjcnWDR7Ag2GwIKDuCEpZ+nTGzhYSEGG4IpeoZ60hHBemFHXJRuxTmTDnQsusPYSjPNCr8VsJ7c7km2zItj5Y05qoCRVJaCkSeQepQd2XRqC+W6G6tDIRuiYSfVW6hfjMj1zAhc6kE66J7i7dwtznOi1XQW1winLTadrJhRReuouwyUHEitMi4AJsCu5/Yg1qBuVT3o88vpVOetK0JCQBbtE09/jqk4PeLrRI5B0LnB302MFSOyDlLAfdMZRR53ULLR8IfrLNhrBYZ+mkCLvgBtOviBODlkzwbRRF/JEqMu49o7xbTpzgUmTG1EX2ZViZbXr7pA5w74vP1k5GUM4DlzZlOz/zorVDOJVC6dkUwr1XYKUuGqeUGhXtoaqhwvn1ozosAqxr9jcqYDMquJg7Dzt7bYadSg87ndo+x7XB3/4eHCuT2LhQzifT1Mt9Mq2a7OfRtxz9+7flF9Mx/hIOA9u1AAAAAElFTkSuQmCC") no-repeat !important;
+        background-size: contain !important;
+    }
+
+    .delete {
+        background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAABpElEQVRIx7VWwUrEMBDtB4hH8Sjid3jUrVbxJCIePfgFIvkR8epuV/oNPYnsJyyL+YF+QE5Sis6EWUkmmaS7YmBoNzvzJvMyL2lRJEY504enU63AWrAOrCfraE6hT7HpgKADCG7ABrDvjKFPgzGjwCczfQcB5uT10wLgc8w7xmBsGnyqH93gTQ1jESO18hwdoyyohDg3rOQBVvMCz68ELejz7PvYJMbbE9wkVuoAq3igyqo1QMTnnnyuuA9iuq04sBKfWIU2ids5JYE7Pre8u2wLU5975YMtz2u9JyQJwC/megfm39cUOTgKE7RCR0STSOACRluQKqWOWFZzP4k7Lt8s+EcivitI+qKIpCQIPiFwP/a3k9B6myAjHuT8OjhOan0c6y4W2+coCjY0011RilpJRBwcaeF0lY5OIhTZTVYCLQE4cR7sSUKMShKad2BVTp8ndHITFRo/KujP1Vmt9zm4JEbw3YXfC0ZREz3sHJAVABxJInLEiD4LNm+CC0g4rvsRx3PgI148/MLZ5l28cFglJiUgga78lcn25H8ufZboz58tPzrtTbMt1DyfAAAAAElFTkSuQmCC") no-repeat !important;
+        background-size: contain !important;
+    }
+    
+    #colorbox {
+        box-sizing: border-box !important;
+        top: 141px !important;
+        left: 15px !important;
+        height: 667px !important;
+        width: 970px !important;
+        border: 1px solid #47a3da !important;
+        background: #ffffff !important;
+    }
+    
+    .large-12 {
+        width: 100%;
+    }
+    
+    .reveal-modal {
+        margin-left: 15px !important;
+        background: #ffffff !important;
+    }
+    
+}
